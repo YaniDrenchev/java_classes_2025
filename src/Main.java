@@ -1,5 +1,7 @@
 import java.security.KeyPair;
 import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class Main {
 
@@ -158,7 +160,27 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        zad2512();
+
+        //zad: https://1001zadachi.com/масив_кратни_индекси.html
+        int n = scanner.nextInt();
+        int a []= new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = scanner.nextInt();
+        }
+
+        int b[] = new int[n];
+        int curr = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] % 3 == 0 || a[i] % 5 == 0){
+                b[curr] = i;
+                curr++;
+            }
+        }
+
+        for (int i = 0; i < curr; i++) {
+            System.out.println(b[i]);
+        }
+
     }
 
     public static void zad2512(){
@@ -179,4 +201,7 @@ public class Main {
         string = string.replaceAll("\\s{2,}", " ");
         System.out.println(string);
     }
+
+
+
 }
