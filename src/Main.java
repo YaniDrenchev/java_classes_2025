@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
 
     public static Scanner scanner = new Scanner(System.in);
-
+    // Hello
     public static void zad241() {
         int n = scanner.nextInt();
         if (n < 3) {
